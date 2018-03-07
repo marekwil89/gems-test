@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Oswald:300,700|Raleway&subset=latin-ext');
-
 @import './colors';
 
-// font-family: 'Raleway', sans-serif;
-// font-family: 'Arimo', sans-serif;
-
 body{
-  font-family: 'Chivo', sans-serif;
+  font-family: 'Raleway', sans-serif;  
 }
 
 .section-title{
@@ -14,20 +10,24 @@ body{
   font-weight: 700;
   font-size: 85px;
   color: $main-color;
-  border-bottom: 2px solid $main-color;
-  
-  &.spacer{
-    // position: relative;
+  letter-spacing: -2px;
 
-    // &:after{
-    //   content: '';
-    //   position: absolute;
-    //   top: 110%;
-    //   right: 0;
-    //   background: $main-color;
-    //   width: 75%;
-    //   height: 2px;
-    // }
+  @media(max-width: 580px){
+    font-size: 65px;
+  }
+
+  &.line{
+    position: relative;
+    &:after{
+      content: '';
+      top: 130%;
+      right: 0;
+      z-index: 99;
+      position: absolute;
+      width: 370px;
+      height: 2px;
+      background: $main-color;
+    }
   }
 }
 
@@ -46,3 +46,22 @@ p{
   line-height: 30px;
 }
 
+.lang-btn{
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+  color: $main-color;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  &.active{
+    font-weight: 700;
+  }
+}
+
+.text-right{
+  text-align: right; 
+}
+
+.text-justify{
+  text-align: justify;
+}

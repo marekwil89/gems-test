@@ -9,6 +9,16 @@
   height: 100vh;
   position: relative;
 
+  @media(max-width: 400px){
+    padding: 120px 0;
+    height: auto;
+  }
+
+  @media(max-height: 500px){
+    padding: 120px 0;
+    height: auto;
+  }
+
   article{
     width: 50%;
     height: 100%;
@@ -18,21 +28,85 @@
     align-items: flex-end;
     flex-direction: column;
 
+    @media(max-width: 1200px){
+      width: 70%;
+    }
+
+    @media(max-width: 850px){
+      width: 100%;
+      padding: 0px;
+    }
+
     .city-box{
-      width: 550px;
+      width: 510px;
       padding: 20px;
 
+      @media(max-width: 620px){
+        width: 100%;
+      }
 
       &.align-right{
         text-align: right;
       }
+
+      .section-title{
+        margin: 0 0 50px 0;
+
+        @media(max-width: 620px){
+          text-align: center;
+          margin: 30px 0;
+        }
+      }
+
+      .section-sub-title{
+        margin: 0 0 50px 0;
+
+        @media(max-width: 620px){
+          text-align: center;
+          margin: 30px 0;
+        }
+      }
     }
   }
-  aside{
+  .city-image{
     background: url('../img/city-bike.png') no-repeat;
     background-size: cover;
     background-position: center;
     width: 50%;
+    animation: changeInvert 10s infinite;
+
+    @keyframes changeInvert{
+      0%{
+        filter: hue-rotate(480deg)
+      }
+      100%{
+        filter: hue-rotate(100deg)
+      }
+    }
+    
+    @media(max-width: 1200px){
+      width: 30%;
+    }
+
+    @media(max-width: 850px){
+      display: none;
+    }
+  }
+
+  .lang-box{
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 15px;
+
+    .lang-btn{
+      display: block;
+      margin: 0 20px;
+    }
   }
 
   .arrow-bottom{
@@ -42,6 +116,19 @@
     transform: translateX(-50%);
     width: 27px;
     height: 20px;
+    animation: moveDown 2s infinite;
+
+    @keyframes moveDown{
+      0%{
+        transform: translateX(-50%) translateY(0);
+      }
+      50%{
+        transform: translateX(-50%) translateY(30px);
+      }
+      100%{
+        transform: translateX(-50%) translateY(0);        
+      }
+    }
 
     &:after, &:before{
       content: '';
