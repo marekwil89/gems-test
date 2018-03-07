@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter-pack",
+  "name": "gems",
   "authors": [
     "-"
   ],
@@ -15,6 +15,5 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.2.1"
   }
 }

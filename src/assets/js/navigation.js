@@ -1,11 +1,26 @@
-const navElem = document.querySelector('nav');
-const hamburgerElem = document.querySelector('.btn-hamburger');
-
-function toggleClass(){
-    navElem.classList.toggle('active');
-}
-
-hamburgerElem.addEventListener('click', ()=>{
-    console.log('dadada');
-    toggleClass();
+(()=>{
+    const navElem = document.querySelector('nav');
+    const hamburgerElem = document.querySelector('.btn-hamburger');
+    const btnNav = document.querySelector('btn-nav');
+    const documentBody = document.body;
+    
+    function toggleMenu(){
+        navElem.classList.toggle('active');
+    }
+    
+    function removeMenu(){
+        navElem.classList.remove('active');
+    }
+    
+    hamburgerElem.addEventListener('click', ()=>{
+        toggleMenu();
+    })
+    
+    documentBody.addEventListener('click', ()=>{
+        if(navElem.contains(event.target)){
+            return;
+        } else{
+            removeMenu()
+        }
+    })
 })
