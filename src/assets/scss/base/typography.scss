@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Oswald:300,700|Raleway&subset=latin-ext');
+
+@import './colors';
+
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Arimo', sans-serif;
+
+body{
+  font-family: 'Chivo', sans-serif;
+}
+
+.section-title{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 85px;
+  color: $main-color;
+  border-bottom: 2px solid $main-color;
+  
+  &.spacer{
+    // position: relative;
+
+    // &:after{
+    //   content: '';
+    //   position: absolute;
+    //   top: 110%;
+    //   right: 0;
+    //   background: $main-color;
+    //   width: 75%;
+    //   height: 2px;
+    // }
+  }
+}
+
+.section-sub-title{
+  font-size: 39px;
+  font-weight: 100;
+  font-family: 'Oswald', sans-serif;
+  color: $secondary-color;
+}
+
+p{
+  font-size: 13.33px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: $light-color;
+  line-height: 30px;
+}
+

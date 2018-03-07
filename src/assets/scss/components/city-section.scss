@@ -1,0 +1,65 @@
+@import '../base/colors';
+
+.city-section{
+  display: flex;
+  border: 30px solid $main-color;
+  background: url('../img/city-bg.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+
+  article{
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .city-box{
+      width: 550px;
+      padding: 20px;
+
+
+      &.align-right{
+        text-align: right;
+      }
+    }
+  }
+  aside{
+    background: url('../img/city-bike.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+  }
+
+  .arrow-bottom{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 27px;
+    height: 20px;
+
+    &:after, &:before{
+      content: '';
+      left: 3px;
+      position: absolute;
+      background: $main-color;
+      width: 22px;
+      height: 5px;
+    }
+    
+    &:before{
+      transform: rotate(-50deg);
+      transform-origin: 100% 0;
+    }
+    
+    &:after{
+      transform: rotate(50deg);
+      transform-origin: 0% 0%;
+    }      
+  }
+}
