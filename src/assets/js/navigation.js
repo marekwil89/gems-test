@@ -1,4 +1,4 @@
-(()=>{
+(() => {
     const navElem = document.querySelector('nav');
     const hamburgerElem = document.querySelector('.btn-hamburger');
     const btnNav = document.querySelector('btn-nav');
@@ -16,11 +16,11 @@
         toggleMenu();
     })
     
-    documentBody.addEventListener('click', ()=>{
+    documentBody.addEventListener('click', (event)=>{
         if(navElem.contains(event.target)){
             return;
         } else{
             removeMenu()
         }
     })
-})
+})()

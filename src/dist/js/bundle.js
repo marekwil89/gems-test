@@ -1,21 +1,39 @@
 'use strict';
 
+// (() => {
+//   const btnLang = document.querySelectorAll('.btn-lang');
+
+//   function activeLanguage(event){
+//     btnLang.forEach((elem)=>{
+//       elem.classList.remove('active');
+//     })
+//     event.target.classList.add('active');
+//   }
+
+//   btnLang.forEach((elem)=>{
+//     elem.addEventListener('click', (event)=>{
+//       activeLanguage(event)
+//     })
+//   })
+// })()
+
 (function () {
+  // INTERNET EXPLOER VERSION
   var btnLang = document.querySelectorAll('.btn-lang');
 
   function activeLanguage(event) {
-    btnLang.forEach(function (elem) {
-      elem.classList.remove('active');
-    });
+    for (var i = 0; i < btnLang.length; i++) {
+      btnLang[i].classList.remove('active');
+    }
     event.target.classList.add('active');
   }
 
-  btnLang.forEach(function (elem) {
-    elem.addEventListener('click', function (event) {
+  for (var i = 0; i < btnLang.length; i++) {
+    btnLang[i].addEventListener('click', function (event) {
       activeLanguage(event);
     });
-  });
-});
+  }
+})();
 'use strict';
 
 (function () {
@@ -36,11 +54,11 @@
         toggleMenu();
     });
 
-    documentBody.addEventListener('click', function () {
+    documentBody.addEventListener('click', function (event) {
         if (navElem.contains(event.target)) {
             return;
         } else {
             removeMenu();
         }
     });
-});
+})();
